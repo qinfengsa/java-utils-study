@@ -5,57 +5,66 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.qinfengsa</groupId>
-    <artifactId>guava-study</artifactId>
+    <artifactId>java-utils-study</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>guava</module>
+        <module>commons-lang3</module>
+        <module>reflections</module>
+    </modules>
 
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
     <properties>
         <junit.version>4.12</junit.version>
         <java.version>1.8</java.version>
         <guava.version>29.0-jre</guava.version>
         <logback.version>1.2.3</logback.version>
-        <slf4j.version>1.7.26</slf4j.version>
         <lombok.version>1.18.6</lombok.version>
+        <reflections.version>0.9.12</reflections.version>
+        <commons-lang3.version>3.10</commons-lang3.version>
     </properties>
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/junit/junit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
 
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${guava.version}</version>
-        </dependency>
 
-    </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+            <!-- https://mvnrepository.com/artifact/org.reflections/reflections -->
+            <dependency>
+                <groupId>org.reflections</groupId>
+                <artifactId>reflections</artifactId>
+                <version>${reflections.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
 </project>
