@@ -1,10 +1,10 @@
 package com.qinfengsa.guava.reflect;
 
+import com.qinfengsa.api.service.HelloService;
+import com.qinfengsa.api.service.HelloServiceImpl;
 import com.qinfengsa.guava.proxy.GuavaInvocationHandlerImpl;
-import com.qinfengsa.guava.proxy.GuavaNewInvocationHandlerImpl;
 import com.qinfengsa.guava.proxy.JdkInvocationHandlerImpl;
-import com.qinfengsa.guava.service.HelloService;
-import com.qinfengsa.guava.service.HelloServiceImpl;
+import com.qinfengsa.guava.proxy.GuavaNewInvocationHandlerImpl;
 import org.junit.Test;
 
 /**

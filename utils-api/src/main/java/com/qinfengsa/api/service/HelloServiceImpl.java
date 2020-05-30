@@ -1,5 +1,6 @@
-package com.qinfengsa.guava.service;
+package com.qinfengsa.api.service;
 
+import com.qinfengsa.api.annotation.Service;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -7,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  * @date 2020/05/27 15:48
  */
 @Slf4j
+@Service("test")
 public class HelloServiceImpl implements HelloService {
 
     public HelloServiceImpl() {

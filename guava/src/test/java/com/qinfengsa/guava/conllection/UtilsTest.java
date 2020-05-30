@@ -16,7 +16,7 @@ import com.google.common.collect.Multimaps;
 import com.google.common.collect.Multiset;
 import com.google.common.collect.Multisets;
 import com.google.common.collect.Sets;
-import com.qinfengsa.guava.domain.User;
+import com.qinfengsa.guava.domain.GuUser;
 import lombok.extern.slf4j.Slf4j;
 import org.checkerframework.checker.nullness.qual.Nullable;
 import org.junit.Test;
@@ -122,20 +122,20 @@ public class UtilsTest {
 
         // Maps.uniqueIndex(Iterable,Function) 把集合通过唯一属性，转成map
         // Java8 提供了toMap
-        List<User> list = Arrays.asList(new User(1,"A",11),
-                new User(2,"B",12), new User(3,"C",20),
-                new User(4,"D",22), new User(5,"E",19));
-        ImmutableMap<Integer, User> immutableMap =
-                Maps.uniqueIndex(list, new Function<User, Integer>() {
+        List<GuUser> list = Arrays.asList(new GuUser(1,"A",11),
+                new GuUser(2,"B",12), new GuUser(3,"C",20),
+                new GuUser(4,"D",22), new GuUser(5,"E",19));
+        ImmutableMap<Integer, GuUser> immutableMap =
+                Maps.uniqueIndex(list, new Function<GuUser, Integer>() {
                     @Nullable
                     @Override
-                    public Integer apply(@Nullable User user) {
+                    public Integer apply(@Nullable GuUser user) {
                         return user.getId();
                     }
                 });
         log.debug("immutableMap:{}",immutableMap);
         // Java8 提供了toMap 实现相同的功能
-        Map<Integer, User> map = list.stream().collect(Collectors.toMap(User::getId, java.util.function.Function.identity()));
+        Map<Integer, GuUser> map = list.stream().collect(Collectors.toMap(GuUser::getId, java.util.function.Function.identity()));
         log.debug("map:{}",map);
         // Maps.difference(Map, Map) 用来比较两个Map 以获取所有不同点
         Map<Integer,String> map1 = new HashMap<>();

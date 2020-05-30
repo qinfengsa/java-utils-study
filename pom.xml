@@ -11,6 +11,7 @@
         <module>guava</module>
         <module>commons-lang3</module>
         <module>reflections</module>
+        <module>utils-api</module>
     </modules>
 
     <packaging>pom</packaging>

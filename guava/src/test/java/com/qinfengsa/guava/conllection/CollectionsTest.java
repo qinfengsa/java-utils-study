@@ -13,7 +13,7 @@ import com.google.common.collect.Range;
 import com.google.common.collect.RangeSet;
 import com.google.common.collect.Table;
 import com.google.common.collect.TreeRangeSet;
-import com.qinfengsa.guava.domain.User;
+import com.qinfengsa.guava.domain.GuUser;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -158,7 +158,7 @@ public class CollectionsTest {
     }
 
     public void testClassToInstanceMap() {
-        ClassToInstanceMap<User> map = MutableClassToInstanceMap.create();
+        ClassToInstanceMap<GuUser> map = MutableClassToInstanceMap.create();
 
 
 

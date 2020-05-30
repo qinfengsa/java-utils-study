@@ -1,4 +1,4 @@
-package com.qinfengsa.guava.service;
+package com.qinfengsa.api.service;
 
 /**
  * @author qinfengsa
