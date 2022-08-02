@@ -7,7 +7,7 @@ import org.objectweb.asm.FieldVisitor;
 /**
  * class 删除 字段
  *
- * @author wangheng
+ * @author qinfengsa
  * @date 2022/07/26 17:26
  */
 public class ClassRemoveFieldVisitor extends ClassVisitor {

@@ -2,17 +2,19 @@ package org.example.asm.method;
 
 import java.lang.reflect.Method;
 import org.example.asm.sample.HelloWorldDemo;
-import org.example.asm.sample.HelloWorldDemoChange;
+import org.example.asm.sample.HelloWorldDemoTransform;
 import org.objectweb.asm.Opcodes;
 
 /**
- * @author wangheng
+ * class 删除方法
+ *
+ * @author qinfengsa
  * @date 2022/07/26 18:03
  */
 public class ClassRemoveMethodRun {
 
     public static void main(String[] args) throws Exception {
-        HelloWorldDemoChange.change(cw -> new ClassRemoveMethodVisitor(Opcodes.ASM9, cw,
+        HelloWorldDemoTransform.transform(cw -> new ClassRemoveMethodVisitor(Opcodes.ASM9, cw,
                 "add", "(II)I"));
     }
 

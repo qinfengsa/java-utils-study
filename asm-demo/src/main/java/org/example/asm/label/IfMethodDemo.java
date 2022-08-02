@@ -20,7 +20,7 @@ import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 
 /**
- * @author wangheng
+ * @author qinfengsa
  * @date 2022/07/25 15:53
  */
 public class IfMethodDemo {

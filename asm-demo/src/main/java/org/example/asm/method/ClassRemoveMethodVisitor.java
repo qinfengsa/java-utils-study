@@ -5,7 +5,9 @@ import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
 
 /**
- * @author wangheng
+ * class 删除方法
+ *
+ * @author qinfengsa
  * @date 2022/07/26 18:03
  */
 public class ClassRemoveMethodVisitor extends ClassVisitor {

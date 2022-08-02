@@ -6,7 +6,7 @@ import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
 /**
- * @author wangheng
+ * @author qinfengsa
  * @date 2022/06/24 15:45
  */
 public class HelloWorldGenerateDemo {

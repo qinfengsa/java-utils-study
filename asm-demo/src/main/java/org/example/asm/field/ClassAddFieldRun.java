@@ -2,17 +2,17 @@ package org.example.asm.field;
 
 import java.lang.reflect.Field;
 import org.example.asm.sample.HelloWorldDemo;
-import org.example.asm.sample.HelloWorldDemoChange;
+import org.example.asm.sample.HelloWorldDemoTransform;
 import org.objectweb.asm.Opcodes;
 
 /**
- * @author wangheng
+ * @author qinfengsa
  * @date 2022/07/26 17:49
  */
 public class ClassAddFieldRun {
 
     public static void main(String[] args) throws Exception {
-        HelloWorldDemoChange.change(cw -> new ClassAddFieldVisitor(Opcodes.ASM9, cw, Opcodes.ACC_PUBLIC,
+        HelloWorldDemoTransform.transform(cw -> new ClassAddFieldVisitor(Opcodes.ASM9, cw, Opcodes.ACC_PUBLIC,
                 "objValue", "Ljava/lang/Object;"));
     }
 

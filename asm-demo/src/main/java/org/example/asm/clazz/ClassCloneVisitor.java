@@ -5,7 +5,7 @@ import org.objectweb.asm.ClassVisitor;
 /**
  * 为 class 添加 clone 接口
  *
- * @author wangheng
+ * @author qinfengsa
  * @date 2022/07/26 16:58
  */
 public class ClassCloneVisitor extends ClassVisitor {

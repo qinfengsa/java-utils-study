@@ -23,7 +23,7 @@ import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.MethodVisitor;
 
 /**
- * @author wangheng
+ * @author qinfengsa
  * @date 2022/07/26 11:11
  */
 public class MethodVisitorDemo {

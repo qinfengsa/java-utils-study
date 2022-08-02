@@ -7,7 +7,7 @@ import org.objectweb.asm.FieldVisitor;
 /**
  * class 添加 字段
  *
- * @author wangheng
+ * @author qinfengsa
  * @date 2022/07/26 17:48
  */
 public class ClassAddFieldVisitor extends ClassVisitor {

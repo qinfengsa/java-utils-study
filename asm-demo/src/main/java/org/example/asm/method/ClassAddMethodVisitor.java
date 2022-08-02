@@ -5,7 +5,9 @@ import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
 
 /**
- * @author wangheng
+ * class 添加方法
+ *
+ * @author qinfengsa
  * @date 2022/07/26 18:04
  */
 public abstract class ClassAddMethodVisitor extends ClassVisitor {

@@ -1,7 +1,7 @@
 package org.example.asm.sample;
 
 /**
- * @author wangheng
+ * @author qinfengsa
  * @date 2022/06/27 11:10
  */
 public class HelloWorldDemo {

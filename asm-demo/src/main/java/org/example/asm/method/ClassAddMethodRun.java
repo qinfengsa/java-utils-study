@@ -2,18 +2,20 @@ package org.example.asm.method;
 
 import java.lang.reflect.Method;
 import org.example.asm.sample.HelloWorldDemo;
-import org.example.asm.sample.HelloWorldDemoChange;
+import org.example.asm.sample.HelloWorldDemoTransform;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
 /**
- * @author wangheng
+ * class 添加方法
+ *
+ * @author qinfengsa
  * @date 2022/07/26 18:04
  */
 public class ClassAddMethodRun {
 
     public static void main(String[] args) throws Exception {
-        HelloWorldDemoChange.change(cw -> new ClassAddMethodVisitor(Opcodes.ASM9, cw, Opcodes.ACC_PUBLIC,
+        HelloWorldDemoTransform.transform(cw -> new ClassAddMethodVisitor(Opcodes.ASM9, cw, Opcodes.ACC_PUBLIC,
                 "mul", "(II)I", null, null) {
             @Override
             protected void generateMethodBody(MethodVisitor mv) {

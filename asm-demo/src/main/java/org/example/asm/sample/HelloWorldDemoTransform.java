@@ -8,25 +8,25 @@ import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
 
 /**
- * @author wangheng
+ * @author qinfengsa
  * @date 2022/07/26 17:08
  */
-public class HelloWorldDemoChange {
+public class HelloWorldDemoTransform {
 
-    static final ClassLoader classLoader = HelloWorldDemoChange.class.getClassLoader();
+    static final ClassLoader classLoader = HelloWorldDemoTransform.class.getClassLoader();
 
-    public static void change(Function<ClassWriter, ClassVisitor> func) throws Exception {
+    public static void transform(Function<ClassWriter, ClassVisitor> func) throws Exception {
         String relativePath = "org/example/asm/sample/HelloWorldDemo.class";
         String path = classLoader.getResource("").getPath();
         File file = FileUtils.getFile(path, relativePath);
         byte[] bytes = FileUtils.readFileToByteArray(file);
-        // 构建ClassReader
+        // 构建 ClassReader
         ClassReader cr = new ClassReader(bytes);
-        // 构建ClassWriter
+        // 构建 ClassWriter
         ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
-        // 串连ClassVisitor
+        // 串连 ClassVisitor
         ClassVisitor cv = func.apply(cw);
-        // 结合ClassReader和ClassVisitor
+        // 连接 ClassReader和ClassVisitor
         int parsingOptions = ClassReader.SKIP_DEBUG | ClassReader.SKIP_FRAMES;
         cr.accept(cv, parsingOptions);
 

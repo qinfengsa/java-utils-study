@@ -3,7 +3,7 @@ package org.example.asm.label;
 import java.lang.reflect.Method;
 
 /**
- * @author wangheng
+ * @author qinfengsa
  * @date 2022/07/25 16:03
  */
 public class IfMethodDemoRun {

@@ -1,7 +1,7 @@
 package org.example.javap;
 
 /**
- * @author wangheng
+ * @author qinfengsa
  * @date 2022/06/23 15:48
  */
 public class JavaDemo {
